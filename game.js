@@ -101,9 +101,11 @@ scene("game", ({ level, score }) => {
 
 	add([sprite("bg"), layer("bg")]);
 
+	add([text("Press Space to Attack"), pos(60, 450), layer("ui"), scale(2)]);
+
 	const scoreLabel = add([
 		text(`score: ${score}`),
-		pos(320, 450),
+		pos(320, 480),
 		layer("ui"),
 		{
 			value: score,
@@ -111,7 +113,7 @@ scene("game", ({ level, score }) => {
 		scale(2),
 	]);
 
-	add([text("level " + parseInt(level + 1)), pos(320, 470), scale(2)]);
+	add([text("level " + parseInt(level + 1)), pos(320, 500), scale(2)]);
 
 	const player = add([
 		sprite("link-going-right"),
